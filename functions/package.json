@@ -2,13 +2,12 @@
   "name": "date-ai-functions",
   "private": true,
   "type": "commonjs",
-  "engines": {
-    "node": "18"
-  },
+  "engines": { "node": "18" },
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
+    "serve": "npm run build && firebase emulators:start --only functions,firestore",
+    "start": "npm run serve",
     "deploy": "npm run build && firebase deploy --only functions",
     "lint": "echo \"(optional) add eslint here\""
   },
